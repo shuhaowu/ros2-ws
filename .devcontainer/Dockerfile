@@ -2,9 +2,12 @@
 FROM osrf/ros:humble-desktop
 
 ARG USERNAME=human
+ARG uid=1000
+ARG gid=1000
 
 RUN set -xe; \
-    adduser --gecos "" --disabled-password $USERNAME; \
+    addgroup --gid $gid $USERNAME; \
+    adduser --gecos "" --disabled-password --uid $uid --gid $gid $USERNAME; \
     usermod -a -G sudo $USERNAME; \
     usermod -a -G video $USERNAME; \
     echo "%sudo ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/sudoers;

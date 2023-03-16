@@ -1,11 +1,6 @@
 {
   "name": "ros2-ws",
   "dockerFile": "Dockerfile",
-  "build": {
-    "args": {
-      "WORKSPACE": "${containerWorkspaceFolder}"
-    }
-  },
   "remoteUser": "human",
   "runArgs": [
     // "--network=host", // Network host allows for host process to communicate. However, with this on, it can interfere with other computers on the same network.
