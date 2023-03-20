@@ -9,9 +9,7 @@ fi
 export HISTFILE=$WORKSPACE_FOLDER/.devcontainer/zsh_history
 
 nvrun() {
-  export __NV_PRIME_RENDER_OFFLOAD=1
-  export __GLX_VENDOR_LIBRARY_NAME=nvidia
-  "$@"
+  __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia "$@"
 }
 
 if [ -f $WORKSPACE_FOLDER/.devcontainer/nvidia-always-on ]; then

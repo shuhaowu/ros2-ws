@@ -4,6 +4,8 @@
   "remoteUser": "human",
   "runArgs": [
     // "--network=host", // Network host allows for host process to communicate. However, with this on, it can interfere with other computers on the same network.
+    // "--runtime=nvidia",
+    // "--gpus=all",
     "--cap-add=SYS_PTRACE", // debugger
     "--security-opt=seccomp:unconfined", // Don't remember what this is for
     "--security-opt=apparmor:unconfined", // Don't remember what this is for
@@ -15,6 +17,7 @@
     "DISPLAY": "${localEnv:DISPLAY}",
     "WORKSPACE_FOLDER": "${containerWorkspaceFolder}"
   },
+  "overrideCommand": false,
   "customizations": {
     "vscode": {
       "settings": {
