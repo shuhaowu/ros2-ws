@@ -1,0 +1,24 @@
+---
+version: "3.8"
+services:
+  dev:
+    build:
+      context: ./.devcontainer
+    network_mode: "host"
+    volumes:
+      - .:/workspace
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - /dev/bus/usb:/dev/bus/usb
+    user: "human:human"
+    environment:
+      - "DISPLAY"
+      - "QT_X11_NO_MITSHM=1" # Fix some QT program freezes
+      - "WORKSPACE_FOLDER=/workspace" # Match the mount above
+    security_opt: # Don't remember what this is for, but it's this or privileged
+      - seccomp:unconfined
+      - apparmor:unconfined
+    cap_add:
+      - SYS_PTRACE # Debugging support
+    devices:
+      - /dev/dri
+    init: true

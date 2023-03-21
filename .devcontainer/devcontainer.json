@@ -15,9 +15,11 @@
   ],
   "containerEnv": {
     "DISPLAY": "${localEnv:DISPLAY}",
+    "QT_X11_NO_MITSHM": "1",
     "WORKSPACE_FOLDER": "${containerWorkspaceFolder}"
   },
   "overrideCommand": false,
+  "init": true,
   "customizations": {
     "vscode": {
       "settings": {

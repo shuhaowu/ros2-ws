@@ -1,3 +1,4 @@
 .devcontainer/nvidia-always-on
 .devcontainer/zsh_history
+.devcontainer/ros-domain-id
 /src
