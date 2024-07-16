@@ -1,6 +1,6 @@
 cd $WORKSPACE_FOLDER
 
-ROS_DISTRO=humble
+ROS_DISTRO=jazzy
 
 if [ -f /opt/ros/$ROS_DISTRO/setup.zsh ]; then
   . /opt/ros/$ROS_DISTRO/setup.zsh

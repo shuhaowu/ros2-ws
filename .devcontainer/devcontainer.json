@@ -25,7 +25,9 @@
       "settings": {
         "telemetry.telemetryLevel": "off",
         "telemetry.enableTelemetry": false,
-        "editor.formatOnSave": true
+        "editor.formatOnSave": true,
+        // Use clangd instead of intellisense
+        "C_Cpp.intelliSenseEngine": "disabled"
       },
       "extensions": [
         "ms-python.python",
@@ -33,7 +35,8 @@
         "ms-vscode.cpptools",
         "redhat.vscode-yaml",
         "smilerobotics.urdf",
-        "twxs.cmake"
+        "twxs.cmake",
+        "llvm-vs-code-extensions.vscode-clangd"
       ]
     }
   }

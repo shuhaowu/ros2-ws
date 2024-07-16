@@ -1,11 +1,12 @@
 
-FROM osrf/ros:humble-desktop
+FROM osrf/ros:jazzy-desktop
 
 ARG USERNAME=human
 ARG uid=1000
 ARG gid=1000
 
 RUN set -xe; \
+    deluser ubuntu; \
     addgroup --gid $gid $USERNAME; \
     adduser --gecos "" --disabled-password --uid $uid --gid $gid $USERNAME; \
     usermod -a -G sudo $USERNAME; \

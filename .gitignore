@@ -2,3 +2,8 @@
 .devcontainer/zsh_history
 .devcontainer/ros-domain-id
 /src
+/build
+/install
+/log
+/.cache
+/.vscode

@@ -1,0 +1,4 @@
+---
+build:
+  cmake-args:
+    - -DCMAKE_EXPORT_COMPILE_COMMANDS=ON # Generate workspace-level compile_commands.json.
