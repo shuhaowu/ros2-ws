@@ -27,7 +27,10 @@
         "telemetry.enableTelemetry": false,
         "editor.formatOnSave": true,
         // Use clangd instead of intellisense
-        "C_Cpp.intelliSenseEngine": "disabled"
+        "C_Cpp.intelliSenseEngine": "disabled",
+        "[cpp]": {
+          "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+        }
       },
       "extensions": [
         "ms-python.python",
