@@ -37,7 +37,8 @@
           "**/*.code-search": true,
           "**/log": true,
           "**/build": true,
-          "**/install": true
+          "**/install": true,
+          "**/.cache": true
         },
         "search.useIgnoreFiles": false
       },
