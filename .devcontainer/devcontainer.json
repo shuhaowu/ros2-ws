@@ -30,7 +30,16 @@
         "C_Cpp.intelliSenseEngine": "disabled",
         "[cpp]": {
           "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
-        }
+        },
+        "search.exclude": {
+          "**/node_modules": true,
+          "**/bower_components": true,
+          "**/*.code-search": true,
+          "**/log": true,
+          "**/build": true,
+          "**/install": true
+        },
+        "search.useIgnoreFiles": false
       },
       "extensions": [
         "ms-python.python",
