@@ -11,7 +11,9 @@
     "--security-opt=apparmor:unconfined", // Don't remember what this is for
     "--device=/dev/dri", // GPU
     "--volume=/tmp/.X11-unix:/tmp/.X11-unix", // X11 GUI, may work with wayland as well
-    "--volume=/dev/bus/usb:/dev/bus/usb" // USB device sharing
+    "--volume=/dev/bus/usb:/dev/bus/usb", // USB device sharing
+    "--ulimit=rtprio=98",
+    "--ulimit=memlock=-1"
   ],
   "containerEnv": {
     "DISPLAY": "${localEnv:DISPLAY}",
@@ -35,10 +37,10 @@
           "**/node_modules": true,
           "**/bower_components": true,
           "**/*.code-search": true,
-          "**/log": true,
-          "**/build": true,
-          "**/install": true,
-          "**/.cache": true
+          "**/log/**": true,
+          "**/build/**": true,
+          "**/install/**": true,
+          "**/.cache/**": true
         },
         "search.useIgnoreFiles": false
       },
@@ -49,7 +51,8 @@
         "redhat.vscode-yaml",
         "smilerobotics.urdf",
         "twxs.cmake",
-        "llvm-vs-code-extensions.vscode-clangd"
+        "llvm-vs-code-extensions.vscode-clangd",
+        "cschlosser.doxdocgen"
       ]
     }
   }
