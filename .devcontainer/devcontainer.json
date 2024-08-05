@@ -30,6 +30,9 @@
         "editor.formatOnSave": true,
         // Use clangd instead of intellisense
         "C_Cpp.intelliSenseEngine": "disabled",
+        "clangd.arguments": [
+          "--header-insertion=never"
+        ],
         "[cpp]": {
           "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
         },
