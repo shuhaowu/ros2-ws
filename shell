@@ -6,4 +6,9 @@
 # https://github.com/microsoft/vscode-remote-release/issues/2485
 # 🤦🤦🤦🤦🤦🤦🤦🤦🤦🤦🤦🤦🤦🤦🤦🤦🤦🤦🤦🤦🤦🤦🤦🤦🤦🤦🤦🤦🤦🤦🤦🤦
 
-exec docker exec -e TERM -it "$(docker ps -aqf "label=devcontainer.local_folder=$(pwd)")" sudo -u human zsh -l
+devcontainer_id=$(docker ps -aqf "label=devcontainer.local_folder=$(pwd)")
+if [ -n "$devcontainer_id" ]; then
+  exec docker exec -e TERM -it "$devcontainer_id" sudo -u human zsh -l
+else
+  exec docker compose exec --user human dev zsh -l
+fi

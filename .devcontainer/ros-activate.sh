@@ -22,5 +22,5 @@ if [ -f $WORKSPACE_FOLDER/.devcontainer/ros-domain-id ]; then
 fi
 if [ -z "$ROS_DOMAIN_ID" ]; then
   echo "WARNING: ROS_DOMAIN_ID not set. There's a chance that you may pollute others' ROS environments on this network."
-  echo "WARNING: check .devcontainer/ros-domain-id to see if it exists or if it is empty."
+  echo "WARNING: check ${WORKSPACE_FOLDER}/.devcontainer/ros-domain-id to see if it exists or if it is empty."
 fi
